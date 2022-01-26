@@ -25,6 +25,7 @@ export default {
       // this.$store.commit('CREATE_IDEAS', idea);
       this.$store.dispatch("createIdea", idea)
       this.title = "";
+      console.log("IdeaCreate.vue",this)
     }
   },
 }

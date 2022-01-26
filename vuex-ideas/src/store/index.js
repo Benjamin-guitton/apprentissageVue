@@ -20,7 +20,7 @@ export default createStore({
   getters: {
     allIdeas(state) {
       const allIdeas = Object.keys(state.ideas).map(key => state.ideas[key]);
-      console.log(allIdeas);
+      console.log("getters", allIdeas);
       return allIdeas;
     }
     // { 123: {}, 345: {}} => [{}, {}, {}]
