@@ -30,7 +30,20 @@
 </template>
 
 <script>
+
+import productService from "../../services/productService";
+
 export default {
+  data() {
+    return {
+      products: []
+    };
+  },
+  created() {
+    productService.getProducts().then(res => {
+      this.products = res.data;
+    })
+  },
   name: "ProductList"
 }
 </script>
