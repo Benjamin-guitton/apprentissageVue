@@ -1,27 +1,29 @@
 {
-  "products": [{
-    "id": 9780596806750,
-    "title": "JavaScript Patterns: Build Better Applications with Coding and Design Patterns",
-    "author": {
-      "lastName": "Stefanov",
-      "firstName": "Stoyan"
+  "products": [
+    {
+      "id": 9780596806750,
+      "title": "JavaScript Patterns: Build Better Applications with Coding and Design Patterns",
+      "author": {
+        "lastName": "Stefanov",
+        "firstName": "Stoyan"
+      },
+      "publisher": "O'Reilly Media",
+      "year": 2010,
+      "price": 29.99,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51%2BSiphz7AL._SL200_.jpg"
     },
-    "publisher": "O'Reilly Media",
-    "year": 2010,
-    "price": 29.99,
-    "image": "https://images-na.ssl-images-amazon.com/images/I/51%2BSiphz7AL._SL200_.jpg"
-  }, {
-    "id": 9780596517748,
-    "title": "JavaScript: The Good Parts",
-    "author": {
-      "lastName": "Crockford",
-      "firstName": "Douglas"
+    {
+      "id": 9780596517748,
+      "title": "JavaScript: The Good Parts",
+      "author": {
+        "lastName": "Crockford",
+        "firstName": "Douglas"
+      },
+      "publisher": "O'Reilly Media",
+      "year": 2008,
+      "price": 29.99,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SL200_.jpg"
     },
-    "publisher": "O'Reilly Media",
-    "year": 2008,
-    "price": 29.99,
-    "image": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SL200_.jpg"
-  },
     {
       "id": 9781449331818,
       "title": "Learning JavaScript Design Patterns",
@@ -71,12 +73,13 @@
       "image": "https://images-na.ssl-images-amazon.com/images/I/41TINACY3hL._SL200_.jpg"
     },
     {
-      "id": 9780132350884111,
+      "id": 9780132350884112,
       "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
-      "author": [{
-        "lastName": "Gamma",
-        "firstName": "Erich "
-      },
+      "author": [
+        {
+          "lastName": "Gamma",
+          "firstName": "Erich "
+        },
         {
           "lastName": "Helm",
           "firstName": "Richard "
@@ -94,6 +97,18 @@
       "year": 2008,
       "price": 34.47,
       "image": "https://images-na.ssl-images-amazon.com/images/I/51szD9HC9pL._SL200_.jpg"
+    },
+    {
+      "title": "FVSSD",
+      "author": {
+        "firstName": "VFSVS",
+        "lastName": "SVSVS"
+      },
+      "publisher": "VSSDV",
+      "year": 2022,
+      "price": "25",
+      "image": "image.png",
+      "id": "123"
     }
   ]
 }
