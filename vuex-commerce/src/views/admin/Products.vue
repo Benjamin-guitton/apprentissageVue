@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link to="/admin/product-add">Add new book</router-link>
     <ProductList />
   </div>
 </template>
