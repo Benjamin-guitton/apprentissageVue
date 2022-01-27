@@ -14,13 +14,13 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>aze</td>
-        <td>qsd</td>
-        <td>xwc</td>
-        <td>2019</td>
-        <td>image</td>
+      <tr v-for="product in products" :key="product.id">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.title}}</td>
+        <td>{{ product.author.firstName }} {{ product.author.name }}</td>
+        <td>{{ product.publisher }}</td>
+        <td>{{ product.year }}</td>
+        <td>{{ product.image}}</td>
         <td>edit</td>
         <td>delete</td>
       </tr>
