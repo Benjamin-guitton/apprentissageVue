@@ -4,7 +4,8 @@ import productService from "../services/productService";
 export default createStore({
   state: {
     products: [],
-    errors: []
+    errors: [],
+    cart: []
   },
   mutations: {
     GET_PRODUCTS(state, products) {
@@ -15,6 +16,9 @@ export default createStore({
     },
     GET_PRODUCTS_ERROR(state, error) {
       state.errors = [error, ...state.errors];
+    },
+    ADD_TO_CART(state, product) {
+      state.cart = [product, ...state.cart];
     }
   },
   actions: {
@@ -35,6 +39,13 @@ export default createStore({
       productService.createProduct(product).then(() => {
         commit("CREATE_PRODUCT", product);
       })
+    },
+    addToCart({ commit }, product) {
+      productService.addToCart(product).then(() => {
+        commit("ADD_TO_CART", product);
+      }).catch(
+          err => console.error(err)
+      );
     }
 
   },
