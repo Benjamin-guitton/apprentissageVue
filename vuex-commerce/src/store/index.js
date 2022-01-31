@@ -11,7 +11,7 @@ export default createStore({
     GET_PRODUCTS(state, products) {
       state.products = products;
     },
-    CREATE_PRODUCT(state, products) {
+    CREATE_PRODUCT(state, product) {
       state.products = [product, ...state.products];
     }
   },
