@@ -3,9 +3,8 @@ import productService from "../services/productService";
 
 export default createStore({
   state: {
-    products: [
-
-    ]
+    products: [],
+    errors: []
   },
   mutations: {
     GET_PRODUCTS(state, products) {
@@ -13,6 +12,9 @@ export default createStore({
     },
     CREATE_PRODUCT(state, product) {
       state.products = [product, ...state.products];
+    },
+    GET_PRODUCTS_ERROR(state, error) {
+      state.errors = [error, ...state.errors];
     }
   },
   actions: {
@@ -21,7 +23,13 @@ export default createStore({
       .then(res => {
       commit("GET_PRODUCTS", res.data);
       })
-      .catch(err => console.error(err.message));
+      .catch(err => {
+        const error = {
+          date: new Date(),
+          message: `failed to retrieve products: ${err.message}`
+        }
+        commit("GET_PRODUCTS_ERROR", error);
+      });
     },
     createProduct({ commit }, product) {
       productService.createProduct(product).then(() => {
