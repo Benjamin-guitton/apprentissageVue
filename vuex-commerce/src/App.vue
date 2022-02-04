@@ -9,7 +9,11 @@
     <span class="spacer">
       <router-link to="/admin">Admin</router-link>
     </span>
-    <span class="float-lg-end">cart (0)</span>
+    <span class="float-lg-end">
+      <router-link to="/cart">
+        Cart (0)
+      </router-link>
+    </span>
   </div>
   <div class="container-fluid">
     <router-view />

@@ -49,5 +49,10 @@ export default createStore({
     }
 
   },
+  getters: {
+    getCart(state) {
+      return state.cart;
+    }
+  },
   modules: {},
 });

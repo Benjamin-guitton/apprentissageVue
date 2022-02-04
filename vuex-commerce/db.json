@@ -135,6 +135,18 @@
       "year": 2008,
       "price": 29.99,
       "image": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SL200_.jpg"
+    },
+    {
+      "id": 9781593279509,
+      "title": "Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming",
+      "author": {
+        "lastName": "Haverbeke",
+        "firstName": "Marijn"
+      },
+      "publisher": "No Starch Press",
+      "year": 2018,
+      "price": 39.95,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51I9naPg55L._SL200_.jpg"
     }
   ]
 }
