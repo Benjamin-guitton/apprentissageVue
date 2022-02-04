@@ -27,14 +27,14 @@ export default {
   },
   methods: {
     addToCart(product) {
-      this.$store.dispatch("addToCart", product).then(() => {
+      this.$store.dispatch("updateCart", product).then(() => {
         console.log(this.$store.state.cart);
       })
 
     }
   },
-  name: "Products"
-}
+  name: "Products",
+};
 </script>
 
 <style scoped>

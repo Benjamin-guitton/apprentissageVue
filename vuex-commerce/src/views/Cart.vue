@@ -2,12 +2,11 @@
   <div>
     <h1>Cart</h1>
     <div v-if="cart">
-      <div v-for="product in cart" :key="product.id">
-        {{ product.title }} - {{ product.price }}
+      <div v-for="product in cart.products" :key="product.id">
+        {{ product.quantity }} {{ product.title }} - {{ product.price }}
       </div>
     </div>
   </div>
-
 </template>
 
 <script>

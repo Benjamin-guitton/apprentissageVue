@@ -17,42 +17,45 @@ export default createStore({
     GET_PRODUCTS_ERROR(state, error) {
       state.errors = [error, ...state.errors];
     },
-    ADD_TO_CART(state, product) {
-      state.cart = [product, ...state.cart];
-    }
+    UPDATE_CART(state, cart) {
+      state.cart = cart;
+    },
   },
   actions: {
     getProducts({ commit }) {
-      productService.getProducts()
-      .then(res => {
-      commit("GET_PRODUCTS", res.data);
-      })
-      .catch(err => {
-        const error = {
-          date: new Date(),
-          message: `failed to retrieve products: ${err.message}`
-        }
-        commit("GET_PRODUCTS_ERROR", error);
-      });
+      productService
+        .getProducts()
+        .then((res) => {
+          commit("GET_PRODUCTS", res.data);
+        })
+        .catch((err) => {
+          const error = {
+            date: new Date(),
+            message: `failed to retrieve products: ${err.message}`,
+          };
+          commit("GET_PRODUCTS_ERROR", error);
+        });
     },
     createProduct({ commit }, product) {
       productService.createProduct(product).then(() => {
         commit("CREATE_PRODUCT", product);
-      })
+      });
     },
-    addToCart({ commit }, product) {
-      productService.addToCart(product).then(() => {
-        commit("ADD_TO_CART", product);
-      }).catch(
-          err => console.error(err)
-      );
-    }
+    updateCart({ commit }, product) {
+      productService
+        .addToCart(product)
+        .then(() => {
+          commit("UPDATE_CART", JSON.parse(localStorage.getItem('vuex-commerce-cart'))
+          );
+      })
+        .catch(err => console.error(err));
+    },
 
   },
   getters: {
     getCart(state) {
       return state.cart;
-    }
+    },
   },
   modules: {},
 });
