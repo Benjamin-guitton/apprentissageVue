@@ -56,6 +56,14 @@ export default createStore({
     getCart(state) {
       return state.cart;
     },
+    getNumberArticlesInCart(state) {
+      if(!state.cart.products) return 0;
+      const numberArticles = state.cart.products.reduce((acc, curr) => {
+        console.log({ acc, curr })
+        return acc + curr.quantity;
+      }, 0);
+      return numberArticles;
+    }
   },
   modules: {},
 });
