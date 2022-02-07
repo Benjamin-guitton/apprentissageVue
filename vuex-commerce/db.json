@@ -112,41 +112,6 @@
     }
   ],
   "cart": [
-    {
-      "id": 9780596806750,
-      "title": "JavaScript Patterns: Build Better Applications with Coding and Design Patterns",
-      "author": {
-        "lastName": "Stefanov",
-        "firstName": "Stoyan"
-      },
-      "publisher": "O'Reilly Media",
-      "year": 2010,
-      "price": 29.99,
-      "image": "https://images-na.ssl-images-amazon.com/images/I/51%2BSiphz7AL._SL200_.jpg"
-    },
-    {
-      "id": 9780596517748,
-      "title": "JavaScript: The Good Parts",
-      "author": {
-        "lastName": "Crockford",
-        "firstName": "Douglas"
-      },
-      "publisher": "O'Reilly Media",
-      "year": 2008,
-      "price": 29.99,
-      "image": "https://images-na.ssl-images-amazon.com/images/I/5131OWtQRaL._SL200_.jpg"
-    },
-    {
-      "id": 9781593279509,
-      "title": "Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming",
-      "author": {
-        "lastName": "Haverbeke",
-        "firstName": "Marijn"
-      },
-      "publisher": "No Starch Press",
-      "year": 2018,
-      "price": 39.95,
-      "image": "https://images-na.ssl-images-amazon.com/images/I/51I9naPg55L._SL200_.jpg"
-    }
+
   ]
 }

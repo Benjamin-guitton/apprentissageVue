@@ -11,14 +11,25 @@
     </span>
     <span class="float-lg-end">
       <router-link to="/cart">
-        Cart (0)
-      </router-link>
+        <i class="fas fa-shopping-cart"></i>
+        Cart ({{ numberArticlesInCart }}) </router-link>
     </span>
   </div>
   <div class="container-fluid">
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    numberArticlesInCart() {
+      return this.$store.getters.getNumberArticlesInCart;
+
+    }
+  }
+}
+</script>
 
 <style>
 #nav {
